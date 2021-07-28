@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+    <h1>vuejsUdemy</h1>
+    <button v-on:click="toggleBox  = !toggleBox">la couleur</button>
+        <!-- <template v-if="toggleBox">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, doloremque!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, doloremque!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, doloremque!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, doloremque!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, doloremque!</p>
+        </template> -->
+        <!-- <ul>
+            <li v-for="(fruit , index) in tableau"> {{ index}} {{ fruit }}</li>
+        </ul> -->
+        <!-- <ul>
+            <li v-for="(val, props) in chat">{{ props }} : {{ val }}</li>
+        </ul> -->
+        <ul>
+            <li v-for="objet in table">
+                <div v-for= "(val, props) in objet">
+                    {{ props }} : {{ val }}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                // tableau: ["tomate", "fraise", "pomme", "poire"],
+                chat:{
+                    race: 'berus', 
+                    age: 4,
+                    poinds: "15kg"
+                },
+                table:[
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    { race: 'berus', age: 4,poinds: "15kg"},
+                    ],
+                toggleBox : true,
+            }, 
+        });
+    </script>
+</body>
+
+</html>
